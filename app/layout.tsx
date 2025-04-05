@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/common/header";
 import Footer from "@/components/common/footer";
 
+
 const fontSans = FontSans({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -11,7 +12,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "AI Summarizer",
+  title: "QuickSummarize",
   description: "AI Powered PDF Document Summarizer",
 };
 

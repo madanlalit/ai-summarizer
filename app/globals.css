@@ -9,7 +9,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  
+
   /* Sidebar Colors */
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
@@ -19,14 +19,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  
+
   /* Chart Colors */
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  
+
   /* UI Element Colors */
   --color-ring: var(--ring);
   --color-input: var(--input);
@@ -44,26 +44,32 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  
+
   /* Border Radius */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  
+
   /* Dark Mode */
   --color-dark-background: var(--dark-background);
   --color-dark-foreground: var(--dark-foreground);
+  --color-brand: var(----brand);
+  --color-color-5: var(----color-5);
+  --color-color-4: var(----color-4);
+  --color-color-3: var(----color-3);
+  --color-color-2: var(----color-2);
+  --color-color-1: var(----color-1);
 }
 
 /* Light Mode (Default) */
 :root {
   --radius: 0.625rem;
-  
+
   /* Base Colors */
   --background: #F2EFE7; /* Light Beige */
   --foreground: #006A71; /* Dark Teal */
-  
+
   /* UI Components */
   --card: #F2EFE7;
   --card-foreground: #006A71;
@@ -78,19 +84,19 @@
   --accent: #48A6A7;
   --accent-foreground: #F2EFE7;
   --destructive: #006A71;
-  
+
   /* Borders & Focus */
   --border: #9ACBD0;
   --input: #F2EFE7;
   --ring: #48A6A7 / 0.5;
-  
+
   /* Chart Colors */
   --chart-1: #48A6A7;
   --chart-2: #9ACBD0;
   --chart-3: #006A71;
   --chart-4: #F2EFE7;
   --chart-5: #9ACBD0;
-  
+
   /* Sidebar */
   --sidebar: #F2EFE7;
   --sidebar-foreground: #006A71;
@@ -100,17 +106,17 @@
   --sidebar-accent-foreground: #006A71;
   --sidebar-border: #9ACBD0;
   --sidebar-ring: #48A6A7 / 0.5;
-  
+
   /* Dark Mode Colors for Light Mode References */
   --dark-background: #004b50; /* Darker Teal */
-  --dark-foreground: #e0dbc7; /* Darker Beige */
+  --dark-foreground: #e0dbc7; /* Darker Beige */ --color-1: hsl(330 100% 40%); --color-2: hsl(140 100% 55%); --color-3: hsl(210 100% 30%); --color-4: hsl(60 100% 70%); --color-5: hsl(295 100% 45%); --brand: hsl(50 100% 50%);
 }
 
 /* Dark Mode Theme */
 .dark {
   --background: #006A71;
   --foreground: #F2EFE7;
-  
+
   /* UI Components */
   --card: #006A71;
   --card-foreground: #F2EFE7;
@@ -125,19 +131,19 @@
   --accent: #9ACBD0;
   --accent-foreground: #F2EFE7;
   --destructive: #F2EFE7;
-  
+
   /* Borders & Focus */
   --border: #48A6A7;
   --input: #48A6A7;
   --ring: #9ACBD0 / 0.5;
-  
+
   /* Chart Colors */
   --chart-1: #48A6A7;
   --chart-2: #9ACBD0;
   --chart-3: #F2EFE7;
   --chart-4: #006A71;
   --chart-5: #9ACBD0;
-  
+
   /* Sidebar */
   --sidebar: #006A71;
   --sidebar-foreground: #F2EFE7;
@@ -147,6 +153,13 @@
   --sidebar-accent-foreground: #F2EFE7;
   --sidebar-border: #48A6A7;
   --sidebar-ring: #9ACBD0 / 0.5;
+  --color-1: hsl(330 100% 40%);
+  --color-2: hsl(140 100% 55%);
+  --color-3: hsl(210 100% 30%);
+  --color-4: hsl(60 100% 70%);
+  --color-5: hsl(295 100% 45%);
+  --brand: hsl(50 100% 50%);
+
 }
 
 /* Base Typography & Element Styles */
@@ -154,9 +167,9 @@
   * {
     @apply border-border;
   }
-  
+
   /* Typography */
-  h1 {
+  h1  {
     @apply text-4xl md:text-6xl xl:text-7xl font-bold;
   }
 
@@ -188,5 +201,14 @@
   padding-inline: 2rem;
   @media (width >= --theme(--breakpoint-sm)) {
     max-width : 1400px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

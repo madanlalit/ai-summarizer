@@ -1,16 +1,16 @@
 "use client";
 
-import { Zap } from 'lucide-react';
+import { ArrowRightIcon, Zap } from 'lucide-react';
 import { Button } from "../ui/button";
 import NavLink from './nav-link';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '../ui/hover-card';
-import { Avatar, AvatarImage, AvatarFallback } from '../ui/avatar'; // Added missing import
+import { Avatar, AvatarImage, AvatarFallback } from '../ui/avatar';
 
 export default function Header() {
     const isLoggedIn = false; // Replace with actual authentication logic
     
     return (
-        <header className="border-b border-gray-100">
+        <header className="border-b border-gray-100 sticky top-0 z-50 bg-white/95 backdrop-blur-sm">
             <nav className="container flex justify-between items-center py-4 lg:px-8 px-4 mx-auto">
                 <div className="flex lg:flex-1 items-center">
                     <NavLink href="/" className="flex no-underline items-center gap-2 text-base font-medium text-gray-600 hover:text-[var(--color-dark-background)] transition-colors">
@@ -67,13 +67,8 @@ export default function Header() {
                         <div className="flex items-center space-x-2">
                             
                             <NavLink href="/sign-in" className="no-underline">
-                                <Button variant="default" className="bg-[var(--color-dark-background)] hover:bg-opacity-90 transition-colors">
+                                <Button effect="expandIcon" icon={ArrowRightIcon} iconPlacement="right" variant="default" className="bg-[var(--color-dark-background)] hover:bg-opacity-90 transition-colors">
                                     Sign In
-                                </Button>
-                            </NavLink>
-                            <NavLink href="/sign-up" className="no-underline">
-                                <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors">
-                                    Sign Up
                                 </Button>
                             </NavLink>
                         </div>
