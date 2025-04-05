@@ -5,7 +5,7 @@ import { Hero } from "../ui/animated-hero"
 
 export default function HeroSection() {
     return (
-        <section className="flex items-center justify-center h-auto w-full py-4 px-4">
+        <section className="flex items-center justify-center h-auto w-full">
             <div className="relative flex h-[500px] items-center justify-center overflow-hidden  bg-background p-55 ">
                 <h1 className=" text-center justify-center text-2xl text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
                     <Hero />
