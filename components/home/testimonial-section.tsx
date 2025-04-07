@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { FaQuoteLeft } from "react-icons/fa";
+import { Quote } from "lucide-react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const TestimonialCard = ({ text, author, role, delay = 0 }) => (
     <motion.div 
@@ -8,16 +9,18 @@ const TestimonialCard = ({ text, author, role, delay = 0 }) => (
         transition={{ duration: 0.5, delay }}
         className="w-full md:w-1/3 p-4"
     >
-        <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 h-full flex flex-col">
-            <FaQuoteLeft className="text-primary/20 text-4xl mb-4" />
-            <p className="text-gray-700 mb-6 flex-grow">{text}</p>
+        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-8 rounded-2xl shadow-lg border border-border hover:shadow-xl hover:border-primary/20 transition-all duration-500 h-full flex flex-col">
+            <Quote className="text-primary/40 w-10 h-10 mb-4" />
+            <p className="text-muted-foreground mb-6 flex-grow">{text}</p>
             <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary/80 to-primary rounded-full flex items-center justify-center text-white font-bold">
-                    {author[0]}
-                </div>
+                <Avatar className="h-10 w-10 bg-gradient-to-br from-primary/80 to-primary">
+                    <AvatarFallback className="text-white font-medium">
+                        {author[0]}
+                    </AvatarFallback>
+                </Avatar>
                 <div className="ml-3">
-                    <p className="font-semibold text-gray-800">{author}</p>
-                    <p className="text-gray-500 text-sm">{role}</p>
+                    <p className="font-semibold">{author}</p>
+                    <p className="text-muted-foreground text-sm">{role}</p>
                 </div>
             </div>
         </div>
@@ -44,24 +47,24 @@ export default function TestimonialsSection() {
     ];
     
     return (
-        <section className="py-20 bg-gradient-to-b from-background to-gray-50">
-            <div className="container px-4 max-w-6xl mx-auto">
-                <motion.h2 
+        <section className="py-24 bg-background relative overflow-hidden">
+            {/* Background decorative elements */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80" />
+            <div className="absolute top-40 -left-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-20 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+            
+            <div className="container relative z-10 max-w-6xl mx-auto">
+                <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-4xl font-bold text-center mb-3"
+                    className="text-center mb-16"
                 >
-                    What Our Users Say
-                </motion.h2>
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-gray-600 text-center mb-12 max-w-2xl mx-auto"
-                >
-                    Join thousands of satisfied users who have transformed their reading experience
-                </motion.p>
+                    <h2 className="text-4xl font-bold mb-3">What Our Users Say</h2>
+                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                        Join thousands of satisfied users who have transformed their reading experience
+                    </p>
+                </motion.div>
                 
                 <div className="flex flex-wrap justify-center items-stretch">
                     {testimonials.map((testimonial, index) => (

@@ -1,7 +1,10 @@
+"use client";
+
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MoveRight, PhoneCall } from "lucide-react";
+import { MoveRight, Zap, FileText, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -42,46 +45,45 @@ export function Hero() {
             className="pb-3"
           >
             <Button variant="secondary" effect="ringHover" size="sm" className="gap-4">
-              Get Started
-              <MoveRight className="w-4 h-4" />
+              <FileText size={18} className="mr-1" /> Try it now
             </Button>
           </motion.div>
           
-          <div className="flex gap-5 flex-col ">
+          <div className="flex gap-5 flex-col">
             <h1 className="text-3xl md:text-5xl lg:text-7xl max-w-2xl tracking-tighter text-center font-regular">
-              <motion.span 
+                <motion.span 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="text-spektr-cyan-50"
-              >
+                className="text-foreground/90"
+                >
                 Our AI PDF Summarizer is 
-              </motion.span>
-              <span 
-                className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-2"
+                </motion.span>
+                <span 
+                className="relative flex w-full justify-center overflow-hidden text-center md:pb-8 md:pt-4"
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
                 role="text"
                 aria-label={`Our AI PDF Summarizer is ${titles[titleIndex]}`}
-              >
+                >
                 &nbsp;
                 <AnimatePresence mode="wait">
                   {titles.map((title, index) => (
-                    index === titleIndex && (
-                      <motion.span
-                        key={title}
-                        className="absolute font-semibold"
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -50 }}
-                        transition={{ 
-                          type: "spring", 
-                          stiffness: 100, 
-                          damping: 15 
-                        }}
-                      >
-                        {title}
-                      </motion.span>
+                  index === titleIndex && (
+                    <motion.span
+                    key={title}
+                    className="absolute font-semibold bg-gradient-to-r from-primary to-[#006A71] bg-clip-text text-transparent px-2"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -50 }}
+                    transition={{ 
+                      type: "spring", 
+                      stiffness: 100, 
+                      damping: 15 
+                    }}
+                    >
+                    {title}
+                    </motion.span>
                     )
                   ))}
                 </AnimatePresence>
@@ -104,14 +106,18 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-3 mt-2"
+            className="flex flex-col sm:flex-row gap-3 mt-4"
           >
-            <Button size="lg" className="gap-4" variant="outline">
-              Jump on a call <PhoneCall className="w-4 h-4" />
-            </Button>
-            <Button variant="default" effect="shineHover" size="lg" className="gap-4">
-              Sign up here <MoveRight className="w-4 h-4" />
-            </Button>
+            <Link href="/pricing">
+              <Button variant="outline" effect="ringHover" size="lg" className="gap-2 border-2 border-primary">
+              View Pricing <DollarSign size={18} className="ml-1" />
+              </Button>
+            </Link>
+            <Link href="/get-started">
+              <Button variant="default" effect="shineHover" size="lg" className="gap-2">
+                Get Started <Zap size={18} className="ml-1" />
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
