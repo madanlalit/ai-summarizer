@@ -190,7 +190,7 @@
   }
 
   /* Buttons */
-  button {
+  button:not([id^="radix-"]) {
     @apply hover:cursor-pointer hover:opacity-95 hover:text-primary-foreground hover:bg-dark-background
       active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
       disabled:opacity-70 disabled:pointer-events-none transition-all duration-200;
