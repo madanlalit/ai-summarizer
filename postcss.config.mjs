@@ -2,6 +2,9 @@ const config = {
   plugins: ["@tailwindcss/postcss"],
   extend: {
     keyframes: {
+      dropShadow: {
+        glow: '0 0 6px #155dfc',
+      },
       shine: {
         '0%': { backgroundPosition: '200% 0' },
         '25%': { backgroundPosition: '-200% 0' },
