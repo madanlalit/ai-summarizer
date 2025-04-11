@@ -67,99 +67,100 @@
   --radius: 0.625rem;
 
   /* Base Colors */
-  --background: #F2EFE7; /* Light Beige */
-  --foreground: #006A71; /* Dark Teal */
+  --background: #ffffff; /* Clean white background */
+  --foreground: #1d3557; /* Deep, muted blue for text */
 
   /* UI Components */
-  --card: #F2EFE7;
-  --card-foreground: #006A71;
-  --popover: #F2EFE7;
-  --popover-foreground: #006A71;
-  --primary: #48A6A7; /* Medium Teal */
-  --primary-foreground: #F2EFE7;
-  --secondary: #9ACBD0; /* Soft Teal */
-  --secondary-foreground: #006A71;
-  --muted: #F2EFE7;
-  --muted-foreground: #48A6A7;
-  --accent: #48A6A7;
-  --accent-foreground: #F2EFE7;
-  --destructive: #006A71;
+  --card: #ffffff; /* White card backgrounds */
+  --card-foreground: #1d3557;
+  --popover: #f1f1f1;
+  --popover-foreground: #1d3557;
+  --primary: #155dfc; /* Core blue accent */
+  --primary-foreground: #ffffff; /* White text on primary elements */
+  --secondary: #e5f5ff; /* Very light blue for secondary elements */
+  --secondary-foreground: #1d3557;
+  --muted: #b0bec5;
+  --muted-foreground: #1d3557;
+  --accent: #f1a7a2; /* Soft coral accent */
+  --accent-foreground: #ffffff;
+  --destructive: #e63946;
 
   /* Borders & Focus */
-  --border: #9ACBD0;
-  --input: #F2EFE7;
-  --ring: #48A6A7 / 0.5;
+  --border: #d1d8e0;
+  --input: #ffffff;
+  --ring: rgba(21, 93, 252, 0.3); /* Light blue ring for focus */
 
   /* Chart Colors */
-  --chart-1: #48A6A7;
-  --chart-2: #9ACBD0;
-  --chart-3: #006A71;
-  --chart-4: #F2EFE7;
-  --chart-5: #9ACBD0;
+  --chart-1: #155dfc;
+  --chart-2: #e5f5ff;
+  --chart-3: #f1a7a2;
+  --chart-4: #b0bec5;
+  --chart-5: #ffffff;
 
   /* Sidebar */
-  --sidebar: #F2EFE7;
-  --sidebar-foreground: #006A71;
-  --sidebar-primary: #48A6A7;
-  --sidebar-primary-foreground: #F2EFE7;
-  --sidebar-accent: #9ACBD0;
-  --sidebar-accent-foreground: #006A71;
-  --sidebar-border: #9ACBD0;
-  --sidebar-ring: #48A6A7 / 0.5;
-
-  /* Dark Mode Colors for Light Mode References */
-  --dark-background: #004b50; /* Darker Teal */
-  --dark-foreground: #e0dbc7; /* Darker Beige */ --color-1: hsl(330 100% 40%); --color-2: hsl(140 100% 55%); --color-3: hsl(210 100% 30%); --color-4: hsl(60 100% 70%); --color-5: hsl(295 100% 45%); --brand: hsl(50 100% 50%);
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1d3557;
+  --sidebar-primary: #155dfc;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1a7a2;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #d1d8e0;
+  --sidebar-ring: rgba(21, 93, 252, 0.3);
+  --color-1: hsl(200 100% 50%);
+  --color-2: hsl(210 100% 60%);
+  --color-3: hsl(0 100% 60%);
+  --color-4: hsl(50 100% 60%);
+  --color-5: hsl(300 100% 50%);
+  --brand: hsl(200 100% 40%);
 }
 
 /* Dark Mode Theme */
 .dark {
-  --background: #006A71;
-  --foreground: #F2EFE7;
+  --background: #121212;
+  --foreground: #e0e0e0;
 
   /* UI Components */
-  --card: #006A71;
-  --card-foreground: #F2EFE7;
-  --popover: #006A71;
-  --popover-foreground: #F2EFE7;
-  --primary: #48A6A7;
-  --primary-foreground: #F2EFE7;
-  --secondary: #9ACBD0;
-  --secondary-foreground: #F2EFE7;
-  --muted: #48A6A7;
-  --muted-foreground: #F2EFE7;
-  --accent: #9ACBD0;
-  --accent-foreground: #F2EFE7;
-  --destructive: #F2EFE7;
+  --card: #262626;
+  --card-foreground: #e0e0e0;
+  --popover: #1c1c1c;
+  --popover-foreground: #e0e0e0;
+  --primary: #155dfc;
+  --primary-foreground: #ffffff;
+  --secondary: #4f9fcf;
+  --secondary-foreground: #e0e0e0;
+  --muted: #4f4f4f;
+  --muted-foreground: #4f9fcf;
+  --accent: #f1a7a2;
+  --accent-foreground: #e0e0e0;
+  --destructive: #e63946;
 
   /* Borders & Focus */
-  --border: #48A6A7;
-  --input: #48A6A7;
-  --ring: #9ACBD0 / 0.5;
+  --border: #155dfc;
+  --input: #4f9fcf;
+  --ring: rgba(21, 93, 252, 0.3);
 
   /* Chart Colors */
-  --chart-1: #48A6A7;
-  --chart-2: #9ACBD0;
-  --chart-3: #F2EFE7;
-  --chart-4: #006A71;
-  --chart-5: #9ACBD0;
+  --chart-1: #155dfc;
+  --chart-2: #e5f5ff;
+  --chart-3: #f1a7a2;
+  --chart-4: #b0bec5;
+  --chart-5: #ffffff;
 
   /* Sidebar */
-  --sidebar: #006A71;
-  --sidebar-foreground: #F2EFE7;
-  --sidebar-primary: #48A6A7;
-  --sidebar-primary-foreground: #F2EFE7;
-  --sidebar-accent: #9ACBD0;
-  --sidebar-accent-foreground: #F2EFE7;
-  --sidebar-border: #48A6A7;
-  --sidebar-ring: #9ACBD0 / 0.5;
-  --color-1: hsl(330 100% 40%);
-  --color-2: hsl(140 100% 55%);
-  --color-3: hsl(210 100% 30%);
-  --color-4: hsl(60 100% 70%);
-  --color-5: hsl(295 100% 45%);
-  --brand: hsl(50 100% 50%);
-
+  --sidebar: #262626;
+  --sidebar-foreground: #e0e0e0;
+  --sidebar-primary: #155dfc;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1a7a2;
+  --sidebar-accent-foreground: #e0e0e0;
+  --sidebar-border: #155dfc;
+  --sidebar-ring: rgba(21, 93, 252, 0.3);
+  --color-1: hsl(200 100% 50%);
+  --color-2: hsl(210 100% 60%);
+  --color-3: hsl(0 100% 60%);
+  --color-4: hsl(50 100% 60%);
+  --color-5: hsl(300 100% 50%);
+  --brand: hsl(200 100% 40%);
 }
 
 /* Base Typography & Element Styles */
@@ -169,38 +170,39 @@
   }
 
   /* Typography */
-  h1  {
-    @apply text-4xl md:text-6xl xl:text-7xl font-bold;
+  h1 {
+    @apply text-4xl md:text-6xl xl:text-7xl font-bold text-primary;
   }
 
   h2 {
-    @apply text-xl lg:text-3xl font-medium;
+    @apply text-xl lg:text-3xl font-medium text-secondary;
   }
 
   h3 {
-    @apply text-lg lg:text-2xl font-medium;
+    @apply text-lg lg:text-2xl font-medium text-accent;
   }
 
   p {
-    @apply leading-relaxed;
+    @apply leading-relaxed text-foreground;
   }
 
   a {
-    @apply hover:cursor-pointer hover:underline transition-colors duration-200;
+    @apply hover:cursor-pointer hover:underline text-primary transition-colors duration-200;
   }
 
   /* Buttons */
-  button {
-    @apply hover:cursor-pointer hover:opacity-95 hover:text-primary-foreground hover:bg-dark-background
+  button:not([id^="radix-"]) {
+    @apply hover:cursor-pointer hover:opacity-95 hover:text-primary-foreground hover:bg-primary
       active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
       disabled:opacity-70 disabled:pointer-events-none transition-all duration-200;
   }
 }
+
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;
   @media (width >= --theme(--breakpoint-sm)) {
-    max-width : 1400px;
+    max-width: 1400px;
   }
 }
 
